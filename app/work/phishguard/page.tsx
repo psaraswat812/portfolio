@@ -170,13 +170,24 @@ export default function PhishGuardPage() {
               </div>
 
               <div className="mt-10 flex flex-wrap items-center gap-5">
-                <a
+                {/* <a
                   href="#architecture"
-                  className="bg-text-primary text-background inline-flex items-center gap-3 rounded-full px-5 py-3 text-sm font-medium transition-transform duration-300 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition-transform duration-300 hover:-translate-y-0.5"
                 >
                   Explore the system
                   <span aria-hidden="true">↓</span>
-                </a>
+                </a> */}
+                <a
+  href="#architecture"
+  style={{
+    backgroundColor: "#ffffff",
+    color: "#000000",
+  }}
+  className="inline-flex items-center gap-3 rounded-full px-5 py-3 text-sm font-medium transition-transform duration-300 hover:-translate-y-0.5"
+>
+  Explore the system
+  <span aria-hidden="true">↓</span>
+</a>
 
                 <a
                   href="#engineering"

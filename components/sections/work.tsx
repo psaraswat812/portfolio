@@ -14,7 +14,7 @@ const projects = [
     description:
       'An intelligent phishing detection platform that analyzes URLs, emails, and suspicious text to assess risk and explain why something may be dangerous.',
     technologies: ['FastAPI', 'Next.js', 'PostgreSQL', 'Redis', 'Docker'],
-    href: '#phishguard',
+    href: '/work/phishguard',
   },
   {
     number: '02',
@@ -23,7 +23,7 @@ const projects = [
     description:
       'An AI-powered resume analysis platform that evaluates resumes, predicts suitable roles, identifies skill gaps, and provides actionable improvement suggestions.',
     technologies: ['Next.js', 'FastAPI', 'SQLAlchemy', 'PostgreSQL'],
-    href: '#resume-screener',
+    href: '/work/resume-screener',
   },
 ];
 
@@ -112,7 +112,7 @@ export function Work() {
                     </span>
                   </div>
 
-                  <h3 className="text-text-primary mt-7 text-4xl font-semibold tracking-tight transition-transform duration-500 group-hover:translate-x-1 sm:text-5xl lg:text-6xl">
+                  <h3 className="text-text-primary mt-6 text-3xl font-semibold tracking-tight transition-transform duration-500 group-hover:translate-x-1 sm:text-4xl">
                     PhishGuard AI
                   </h3>
 

@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, BrainCircuit, FileText } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, BrainCircuit, FileText, GitFork } from 'lucide-react';
+
+import { projectLinks } from '@/lib/projects';
 
 export default function ResumeScreenerCaseStudy() {
   return (
@@ -56,6 +57,16 @@ export default function ResumeScreenerCaseStudy() {
               >
                 View engineering
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300" />
+              </a>
+              <a
+                href={projectLinks.resumeScreener.repository}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-10 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.02] px-4 py-3 text-sm font-medium text-white backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                aria-label="Open AI Resume Screener GitHub repository in a new tab"
+              >
+                GitHub
+                <GitFork className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
 

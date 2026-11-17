@@ -1,4 +1,5 @@
 import { About } from '@/components/sections/about';
+import { Contact } from '@/components/sections/contact';
 import { Work } from '@/components/sections/work';
 import { Hero } from '@/components/sections/hero';
 import { Navbar } from '@/components/layout/navbar';
@@ -12,6 +13,7 @@ export default function HomePage() {
         <Hero />
         <About />
         <Work />
+        <Contact />
       </main>
     </>
   );

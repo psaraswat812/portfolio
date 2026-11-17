@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import { ArrowUpRight, GitFork } from 'lucide-react';
 import { motion, useReducedMotion } from 'motion/react';
 
 import { Container } from '@/components/layout/container';
 import { Section } from '@/components/layout/section';
+import { projectLinks } from '@/lib/projects';
 
 const projects = [
   {
@@ -14,7 +16,8 @@ const projects = [
     description:
       'An intelligent phishing detection platform that analyzes URLs, emails, and suspicious text to assess risk and explain why something may be dangerous.',
     technologies: ['FastAPI', 'Next.js', 'PostgreSQL', 'Redis', 'Docker'],
-    href: '/work/phishguard',
+    href: projectLinks.phishguard.caseStudy,
+    repository: projectLinks.phishguard.repository,
   },
   {
     number: '02',
@@ -23,7 +26,8 @@ const projects = [
     description:
       'An AI-powered resume analysis platform that evaluates resumes, predicts suitable roles, identifies skill gaps, and provides actionable improvement suggestions.',
     technologies: ['Next.js', 'FastAPI', 'SQLAlchemy', 'PostgreSQL'],
-    href: '/work/resume-screener',
+    href: projectLinks.resumeScreener.caseStudy,
+    repository: projectLinks.resumeScreener.repository,
   },
 ];
 
@@ -80,11 +84,7 @@ export function Work() {
             ease: 'easeOut',
           }}
         >
-          <Link
-            href={projects[0].href}
-            className="group block"
-            aria-label="View PhishGuard AI project"
-          >
+          <div className="group">
             <div className="border-border-default bg-surface-elevated/50 hover:border-border-strong hover:bg-surface-elevated/60 relative overflow-hidden rounded-[2rem] border p-6 transition-all duration-700 hover:-translate-y-1 sm:p-8 lg:p-10">
               {/* Project atmosphere */}
               <div
@@ -133,15 +133,26 @@ export function Work() {
                     ))}
                   </div>
 
-                  <div className="text-text-primary mt-9 inline-flex items-center gap-3 text-sm font-medium">
-                    <span>Explore project</span>
-
-                    <span
-                      className="transition-transform duration-300 group-hover:translate-x-1"
-                      aria-hidden="true"
+                  <div className="mt-9 flex flex-wrap items-center gap-3">
+                    <Link
+                      href={projects[0].href}
+                      className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(255,255,255,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-elevated"
+                      aria-label="View PhishGuard AI case study"
                     >
-                      →
-                    </span>
+                      View case study
+                      <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+
+                    <a
+                      href={projects[0].repository}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-border-default text-text-primary hover:border-border-strong inline-flex items-center gap-2 rounded-full border bg-white/[0.02] px-5 py-3 text-sm font-medium backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-elevated"
+                      aria-label="Open PhishGuard AI GitHub repository in a new tab"
+                    >
+                      GitHub repository
+                      <GitFork className="h-4 w-4" aria-hidden="true" />
+                    </a>
                   </div>
                 </div>
 
@@ -307,7 +318,7 @@ export function Work() {
                 </div>
               </div>
             </div>
-          </Link>
+          </div>
         </motion.div>
 
         {/* Second project */}
@@ -322,11 +333,7 @@ export function Work() {
             ease: 'easeOut',
           }}
         >
-          <Link
-            href={projects[1].href}
-            className="group block"
-            aria-label="View AI Resume Screener project"
-          >
+          <div className="group">
             <article className="border-border-default bg-surface-elevated/35 hover:border-border-strong hover:bg-surface-elevated/60 relative overflow-hidden rounded-[1.75rem] border p-7 transition-all duration-500 hover:-translate-y-1 sm:p-8">
               {/* Ambient glow */}
               <div
@@ -370,19 +377,30 @@ export function Work() {
                   </div>
                 </div>
 
-                <div className="text-text-primary inline-flex items-center gap-3 text-sm font-medium">
-                  <span>Explore project</span>
-
-                  <span
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                    aria-hidden="true"
+                <div className="flex flex-wrap items-center gap-3">
+                  <Link
+                    href={projects[1].href}
+                    className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(255,255,255,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-elevated"
+                    aria-label="View AI Resume Screener case study"
                   >
-                    →
-                  </span>
+                    View case study
+                    <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+
+                  <a
+                    href={projects[1].repository}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-border-default text-text-primary hover:border-border-strong inline-flex items-center gap-2 rounded-full border bg-white/[0.02] px-5 py-3 text-sm font-medium backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-elevated"
+                    aria-label="Open AI Resume Screener GitHub repository in a new tab"
+                  >
+                    GitHub repository
+                    <GitFork className="h-4 w-4" aria-hidden="true" />
+                  </a>
                 </div>
               </div>
             </article>
-          </Link>
+          </div>
         </motion.div>
 
         {/* Future work indicator */}

@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
+import { GitFork } from 'lucide-react';
 import { motion, useReducedMotion } from 'motion/react';
 
 import { Container } from '@/components/layout/container';
 import { Section } from '@/components/layout/section';
+import { projectLinks } from '@/lib/projects';
 
 function ArchitectureNode({
   label,
@@ -200,6 +201,16 @@ export default function PhishGuardPage() {
                   className="border-border-default text-text-primary hover:border-border-strong inline-flex items-center gap-3 rounded-full border px-5 py-3 text-sm font-medium bg-white/[0.02] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/[0.05]"
                 >
                   Engineering details
+                </a>
+                <a
+                  href={projectLinks.phishguard.repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-border-default text-text-primary hover:border-border-strong inline-flex items-center gap-2 rounded-full border bg-white/[0.02] px-4 py-3 text-sm font-medium backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  aria-label="Open PhishGuard AI GitHub repository in a new tab"
+                >
+                  GitHub
+                  <GitFork className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
               <div className="mt-9 flex flex-wrap gap-3">

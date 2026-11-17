@@ -12,6 +12,10 @@ const navigation = [
     href: '#about',
   },
   {
+    label: 'Resume',
+    href: '/resume',
+  },
+  {
     label: 'Contact',
     href: '#contact',
   },

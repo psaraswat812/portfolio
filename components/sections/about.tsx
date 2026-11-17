@@ -39,7 +39,7 @@ export function About() {
       <Container>
         {/* Section heading */}
         <motion.div
-          className="max-w-3xl"
+          className="max-w-4xl"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
@@ -48,7 +48,7 @@ export function About() {
             ease: 'easeOut',
           }}
         >
-          <p className="text-accent-primary mb-4 text-sm font-medium tracking-[0.24em] uppercase">
+          <p className="text-accent-primary mb-5 text-sm font-medium tracking-[0.24em] uppercase">
             About / Identity
           </p>
 
@@ -56,7 +56,7 @@ export function About() {
             I build at the intersection of AI, software, and digital products.
           </h2>
 
-          <p className="text-text-secondary mt-6 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">
+          <p className="text-text-secondary mt-7 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">
             I&apos;m Puranjay Saraswat, a computer science student focused on
             AI/ML and software engineering. I enjoy turning technical ideas into
             products that are useful, understandable, and thoughtfully designed.
@@ -65,7 +65,7 @@ export function About() {
 
         {/* Identity grid */}
         <motion.div
-          className="mt-16 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]"
+          className="mt-14 grid gap-5 md:mt-16 lg:gap-6 lg:grid-cols-[0.85fr_1.15fr]"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 36 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -77,7 +77,7 @@ export function About() {
         >
           {/* Identity card */}
           <motion.div
-            className="glass-panel relative overflow-hidden rounded-3xl p-7 sm:p-8"
+            className="glass-panel relative overflow-hidden rounded-3xl p-7 sm:p-9 lg:p-10"
             whileHover={
               shouldReduceMotion
                 ? undefined
@@ -113,7 +113,7 @@ export function About() {
                 Current focus
               </p>
 
-              <div className="mt-8">
+              <div className="mt-10">
                 <motion.div
                   className="text-text-primary flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-xl font-semibold shadow-[0_0_40px_rgba(99,102,241,0.12)]"
                   whileHover={
@@ -132,7 +132,7 @@ export function About() {
                   PS
                 </motion.div>
 
-                <h3 className="text-text-primary mt-7 text-2xl font-semibold tracking-tight">
+                <h3 className="text-text-primary mt-6 text-2xl font-semibold tracking-tight">
                   Puranjay Saraswat
                 </h3>
 
@@ -141,7 +141,7 @@ export function About() {
                 </p>
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-2">
+              <div className="mt-12 flex flex-wrap gap-2.5">
                 {[
                   'Artificial Intelligence',
                   'Machine Learning',
@@ -422,11 +422,11 @@ export function About() {
             </p>
 
             <h2 className="text-text-primary mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
-              What I'm building and learning today.
+              What I&apos;m building and learning today.
             </h2>
 
             <p className="text-text-secondary mt-6 max-w-3xl text-lg leading-8">
-              I'm focused on building production-oriented AI applications while
+              I&apos;m focused on building production-oriented AI applications while
               strengthening my backend engineering skills. Every new project is
               an opportunity to improve architecture, system design, and user
               experience.
@@ -493,7 +493,7 @@ export function About() {
           >
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-10 text-center">
               <p className="text-accent-primary text-sm font-medium tracking-[0.22em] uppercase">
-                Let's Connect
+                Let&apos;s Connect
               </p>
 
               <h2 className="text-text-primary mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
@@ -501,7 +501,7 @@ export function About() {
               </h2>
 
               <p className="text-text-secondary mx-auto mt-6 max-w-2xl text-lg leading-8">
-                I'm always excited to discuss software engineering, AI, machine
+                I&apos;m always excited to discuss software engineering, AI, machine
                 learning, or opportunities to build impactful products.
               </p>
 
@@ -515,6 +515,7 @@ export function About() {
 
                 <a
                   href="/resume.pdf"
+                  download="Puranjay-Saraswat-Resume.pdf"
                   className="hover:border-accent-primary/20 rounded-full border border-white/10 bg-white/[0.03] px-7 py-3 text-sm transition-all duration-300 hover:-translate-y-1"
                 >
                   Download Resume
@@ -524,7 +525,7 @@ export function About() {
           </motion.div>
 
           {/* Principles */}
-          <div className="grid gap-4">
+          <div className="grid gap-5 sm:gap-6">
             {principles.map((principle, index) => (
               <motion.div
                 key={principle.number}
@@ -543,9 +544,9 @@ export function About() {
                         x: 5,
                       }
                 }
-                className="group border-border-default bg-surface-elevated/40 hover:border-border-strong hover:bg-surface-elevated/70 rounded-3xl border p-6 transition-colors duration-500 sm:p-7"
+                className="group border-border-default bg-surface-elevated/40 hover:border-border-strong hover:bg-surface-elevated/70 rounded-3xl border p-7 transition-colors duration-500 sm:p-8"
               >
-                <div className="flex items-start gap-5">
+                <div className="flex items-start gap-5 sm:gap-6">
                   <span className="text-accent-primary pt-1 text-xs font-medium tracking-[0.18em]">
                     {principle.number}
                   </span>
@@ -555,7 +556,7 @@ export function About() {
                       {principle.title}
                     </h3>
 
-                    <p className="text-text-secondary mt-2 max-w-xl text-sm leading-6">
+                    <p className="text-text-secondary mt-3 max-w-xl text-sm leading-6">
                       {principle.description}
                     </p>
                   </div>
